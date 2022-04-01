@@ -166,3 +166,74 @@ nav a:focus {
   background-color: #968DFF;
   color: white;
 }
+
+/*------layouts-------*/
+
+/*-----mobile-----*/
+@media screen and (min-width: 15em) {
+  nav ul {
+    padding: 0 2em;
+    padding-top: 2em;
+  }
+  nav ul li {
+    padding-bottom: 1em;
+  }
+  nav ul li a {
+    text-align: center;
+  }
+  .sm {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+  }
+}
+
+/*-----tablet-----*/
+@media screen and (min-width: 43.75em) {
+  .sm {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 14em;
+  }
+
+  ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  nav ul li {
+    padding: 1em;
+  }  
+}
+
+/*-----desktop-----*/
+@media screen and (min-width: 62.5em) {
+  /*---change color form dark to light for desktop vision---*/
+  @media (prefers-color-scheme: light) {
+    body {
+      background-color: #E0FF8D;
+    }
+    nav a,
+    nav a:link,
+    nav a:visited {
+      background-color: #968DFF;
+      color: white;
+    }
+  }
+  ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: start;
+  }
+  .sm {
+    padding: unset;
+    display: grid;
+    grid-template-columns: 5em 5em;
+    justify-content: end;
+    padding-right: 2.5em;
+    
+  }
+  .sm a {
+    margin: 8px;
+  }
+}
+
